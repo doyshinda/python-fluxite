@@ -13,7 +13,7 @@ This is a Python wrapper (using [PyO3](https://github.com/PyO3/pyo3)) around the
  * Copy the lib to where you want to use it:
 ```Python
 >>> import python_fluxite as metrics
->>> metrics.initialize_reporter('localhost:12345', 'app=my_app', 'influx')
+>>> metrics.initialize_reporter(endpoint='localhost:12345', prefix='app=my_app', observer_type='influx')
 True
 >>> metrics.timer('test', 100)
 True
