@@ -7,9 +7,9 @@ This is a Python wrapper (using [PyO3](https://github.com/PyO3/pyo3)) around the
  * Set this directory to use nightly: `rustup override set nightly`
  * Build: `cargo build --release`
  * Rename the lib file in `target/release`:
-    * on MacOS, rename libpython_fluxite.dylib to python_fluxite.so
-    * on Windows libpython_fluxite.dll to python_fluxite.pyd
-    * on Linux libpython_fluxite.so to python_fluxite.so
+    * on MacOS, rename `libpython_fluxite.dylib` to `python_fluxite.so`
+    * on Windows `libpython_fluxite.dll` to `python_fluxite.pyd`
+    * on Linux `libpython_fluxite.so` to `python_fluxite.so`
  * Copy the lib to where you want to use it:
 ```Python
 >>> import python_fluxite as metrics
