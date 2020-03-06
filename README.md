@@ -19,11 +19,14 @@ True
 True
 >>> metrics.count('foo', 1)
 True
+>>> metrics.gauge('my_gauge', 10)
+True
 ```
 will yield metrics like:
 ```
 test,app=my_app min=100,p50=100,p75=100,p99=100,max=100 1583532538416379278
 foo,app=my_app count=1 1583532540419673108
+my_gauge,app=my_app gauge=10 1583532540419673108
 ```
 
 With Graphite:
@@ -44,4 +47,5 @@ my_app.test.p75 100 1583533026370819708
 my_app.test.p99 100 1583533026370819708
 my_app.test.max 100 1583533026370819708
 my_app.foo 1 1583533028371115264
+my_app.my_gauge 10 1583533028371115264
 ```
